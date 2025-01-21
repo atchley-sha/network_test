@@ -24,7 +24,7 @@
     
 ;weight factors to obtain perceived times
     ;weight initial and transfer wait times
-    WAITFACTOR    = 3.0,  NODES=1-1100000         ;all nodes
+    WAITFACTOR    = 3.0,  NODES=1-1100000         ;all node
     
     ;mode-specific weight applied to transit in-vehicle times and nontransit leg times
     RUNFACTOR[4]  = 1.25                          ;local bus
