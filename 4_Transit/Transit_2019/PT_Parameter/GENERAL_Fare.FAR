@@ -1,0 +1,22 @@
+;----------------------------------------------------------------------------------------
+;                                  PT FARE FILE
+;----------------------------------------------------------------------------------------
+
+;define fare systems
+    FARESYSTEM,
+           NUMBER     = 1, 
+           LONGNAME   = 'Regular Fare Service',   ;up to 40 characters
+           NAME       = 'RegularFare',            ;up to 14 characters
+           STRUCTURE  = 'FLAT',                   ;FLAT, DISTANCE, HILOW, COUNT, FROMTO, ACCUMULATE, FREE
+               SAME   = 'CUMULATIVE',             ;SEPARATE, CUMULATIVE (default), use CUMULATIVE for STRUCTURE=FLAT, use SEPARATE for STRUCTURE=DISTANCE (SEPARATE calculates fare for each leg separately)
+           IBOARDFARE = 10000,                     ;need to be in consistent units with value of time in mode choice
+           FAREFROMFS = 0, 10000                    ;additional fare from transferig from fare systems 1,2 to fare system 1
+
+    FARESYSTEM,
+           NUMBER     = 2, 
+           LONGNAME   = 'Premium Fare Service', 
+           NAME       = 'PremiumFare', 
+           STRUCTURE  = 'FLAT',  
+               SAME   = 'CUMULATIVE',
+           IBOARDFARE = 10000, 
+           FAREFROMFS = 0, 10000                    ;transfer from fare systems 1,2 to fare system 2

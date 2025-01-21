@@ -1,0 +1,14 @@
+# Python cache
+**__pycache__/
+
+# Backup script versions
+**{$$**}**
+*.[0-9][0-9][0-9]
+*.[Bb][Aa][Kk]
+
+# MacOS-specific
+*.DS_Store
+
+# Other editor temp files
+*.swp
+~$*

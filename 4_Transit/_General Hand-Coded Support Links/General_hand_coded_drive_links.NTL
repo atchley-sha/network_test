@@ -1,0 +1,16 @@
+;;<<PT>>;;
+;
+;GENERAL HAND-CODED DRIVE ACCESS LINKS
+;
+;   MODE 30 - KNR
+;   MODE 40 - local bus (for mode 4)
+;   MODE 50 - BRT I (for mode 5)
+;   MODE 60 - express bus (for mode 6)
+;   MODE 70 - LRT (for mode 7)
+;   MODE 80 - CRT (for mode 8)
+;   MODE 90 - BRT III (for mode 9)
+;
+;   example syntax: NT LEG=3407-20131, MODE=40, COST=2.40, DIST=1.00, ONEWAY=T, SPEED=25.0
+;       where LEG is from node to node, COST is in minutes, DIST is in miles, & speed in mph
+
+NT  LEG=1-1,  MODE=40,  COST=2.40,  DIST=1.00,  SPEED=25,  ONEWAY=T    ;dummy link (need at least 1 to keep from crashing)

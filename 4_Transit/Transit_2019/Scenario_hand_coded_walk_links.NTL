@@ -1,0 +1,10 @@
+;;<<PT>>;;
+;
+;SCENARIO-SPECIFIC HAND-CODED WALK ACCESS LINKS
+;
+;   MODE 12 - Walk Access Links
+;
+;   example syntax: NT  LEG=37-20207, MODE=12, COST=2.40, DIST=0.10, ONEWAY=F, SPEED=2.5
+;       where LEG is from node to node, COST is in minutes, DIST is in miles, & speed in mph
+
+NT  LEG=1-1,  MODE=12,  COST=2.40,  DIST=0.10,  ONEWAY=F,  SPEED=2.5    ;dummy link (need at least 1 to keep from crashing)

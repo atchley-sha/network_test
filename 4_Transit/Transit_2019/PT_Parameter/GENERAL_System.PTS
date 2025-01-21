@@ -1,0 +1,55 @@
+;----------------------------------------------------------------------------------------
+;                                  PT SYSTEMS FILE
+;----------------------------------------------------------------------------------------
+
+;modes
+    ;transit modes
+    MODE NUMBER=4 LONGNAME='Local Bus'                           NAME='Bus'  
+    MODE NUMBER=5 LONGNAME='Bus Rapid Transit'                   NAME='BRT'  
+    MODE NUMBER=6 LONGNAME='Express Bus'                         NAME='Express'  
+    MODE NUMBER=7 LONGNAME='Light Rail'                          NAME='Rail'
+    
+    ;walk access links
+    MODE  NUMBER=11   LONGNAME='Auto-Generated Walk Access Link' NAME='ModelGen_Walk'
+    MODE  NUMBER=12   LONGNAME='Hand-Coded Walk Access Link'     NAME='HandCode_Walk' 
+    
+    ;transfer access links
+    MODE  NUMBER=21   LONGNAME='Auto-Generated Transfer Link'    NAME='ModelGen_Xfers' 
+    MODE  NUMBER=22   LONGNAME='Hand-Coded Transfer Link'     	 NAME='HandCode_Xfers' 
+    
+    ;drive access links (drive to PNR)
+    MODE  NUMBER=30   LONGNAME='KNR to Local Bus PNR Link'       NAME='KNR2local'
+    MODE  NUMBER=40   LONGNAME='Drive to Local Bus PNR Link'     NAME='Drive2local'
+    MODE  NUMBER=50   LONGNAME='Drive to BRT PNR Link'           NAME='Drive2BRT5'
+    MODE  NUMBER=60   LONGNAME='Drive to Express Bus PNR Link'   NAME='Drive2Ex' 
+    MODE  NUMBER=70   LONGNAME='Drive to LRT PNR Link'           NAME='Drive2LRT'
+
+
+;operators
+    ;no unique operators specified
+
+;wait curves
+    ;initial wait curve - regular service (max 7.5 min)
+    WAITCRVDEF NUMBER=1,
+               LONGNAME='Initial Wait Time - Regular',
+               NAME='InitWait',
+               CURVE=1-1, 2-1, 15-7.5, 160-7.5
+    
+    ;initial wait  curve - rail (max 5 min)
+    WAITCRVDEF NUMBER=2,
+               LONGNAME='Initial Wait Time - Rail',
+               NAME='InitWait_Rail',
+               CURVE=1-1, 2-1, 10-5, 160-5
+    
+    ;transfer wait curve (1/2 headway)
+    WAITCRVDEF NUMBER=3,
+               LONGNAME='Transfer Wait Time',
+               NAME='XferWait',
+               CURVE=1-1, 2-1, 160-80
+    
+    ;seamless transfer wait curve (max 5 min)
+    WAITCRVDEF NUMBER=4,
+               LONGNAME='Seamless Transfer',
+               NAME='Seamless',
+               CURVE=1-1, 2-1, 10-5, 160-5
+
